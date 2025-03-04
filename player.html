@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Stream OTT Platform</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img src="logo/mmplay logo.svg" alt="Logo">
+        </div>
+        <nav>
+            <a href="#">
+                <img src="icons/search.svg" alt="Search">
+            </a>
+            <a href="/ott">Home</a>
+            <a class="active" href="#">Movies</a>
+            <a href="#">TV Shows</a>
+            <a href="/ott/subscription">Subscription</a>
+            <div class="profile">
+                <img onclick="window.location.href='/ott/login';" src="icons/user.svg" alt="User Profile">
+            </div>
+        </nav>
+    </header>
+
+    <div class="main-container">
+        <div class="video-player">
+            <iframe width="100%" height="343" id="videoPlayer" title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+        <div class="video-details">
+            <h2 id="movieTitle">Loading...</h2>
+            <p id="movieDetail">Please wait while we load the movie details.</p>
+            <div class="description" id="description">
+                Loading description...
+            </div>
+            <button id="moreInfoBtn">Show More</button>
+            <div class="action-buttons">
+                <button><img src="icons/like.svg" alt="">Like</button>
+                <button><img src="icons/watchlater.svg" alt="">Watch Later</button>
+                <button><img src="icons/share.svg" alt="">Share</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- 1st movies list -->
+    <div class="containt-heading">
+        <h3>New Release 2025 <img src="icons/right-arrow.svg" alt=""></h3>
+        <div class="movie-scroller" id="movie-scroller">
+            <!-- Movie cards will be inserted here dynamically -->
+        </div>
+    </div>
+    <!-- 2nd movies list -->
+    <div class="containt-heading">
+        <h3>Trending Now <img src="icons/right-arrow.svg" alt=""></h3>
+        <div class="movie-scroller" id="movie-scroller-trending">
+            <!-- Movie cards will be inserted here dynamically -->
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2025 MMPlay. All rights reserved.</p>
+    </footer>
+
+   <script src="script.js"></script>
+
+</body>
+
+</html>

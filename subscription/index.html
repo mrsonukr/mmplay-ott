@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Subscription Page - OTT Platform</title>
+    <style>
+        body {
+            background-color: #121212;
+            color: #e0e0e0;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            text-align: center;
+            padding: 20px;
+            background-color: #1c1c1c;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+        }
+        h1 {
+            color: #fff;
+        }
+        .plans {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+            gap: 20px;
+        }
+        .plan {
+            background-color: #333;
+            padding: 20px;
+            border-radius: 8px;
+            width: 200px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+        .plan:hover {
+            transform: scale(1.05);
+        }
+        .plan h3 {
+            color: #e0e0e0;
+        }
+        .plan p {
+            color: #bbb;
+        }
+        .price {
+            font-size: 24px;
+            color: #fff;
+            font-weight: bold;
+        }
+        .quality {
+            font-size: 14px;
+            color: #ccc;
+            margin-top: 5px;
+        }
+        .purchase-btn {
+            background-color: #d32f2f;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .purchase-btn:hover {
+            background-color: #c62828;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Choose Your Plan</h1>
+
+    <div class="plans">
+        <!-- Plan 1 -->
+        <div class="plan">
+            <h3>Basic Plan</h3>
+            <p class="price">$9.99/month</p>
+            <p class="quality">Standard Definition (SD)</p>
+            <button class="purchase-btn" onclick="purchasePlan('Basic Plan')">Purchase</button>
+        </div>
+
+        <!-- Plan 2 -->
+        <div class="plan">
+            <h3>Standard Plan</h3>
+            <p class="price">$14.99/month</p>
+            <p class="quality">High Definition (HD)</p>
+            <button class="purchase-btn" onclick="purchasePlan('Standard Plan')">Purchase</button>
+        </div>
+
+        <!-- Plan 3 -->
+        <div class="plan">
+            <h3>Premium Plan</h3>
+            <p class="price">$19.99/month</p>
+            <p class="quality">Ultra High Definition (4K)</p>
+            <button class="purchase-btn" onclick="purchasePlan('Premium Plan')">Purchase</button>
+        </div>
+    </div>
+</div>
+
+<script>
+    function purchasePlan(plan) {
+        // Simulate successful purchase
+        alert(plan + ' has been successfully purchased!');
+    }
+</script>
+
+</body>
+</html>

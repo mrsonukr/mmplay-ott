@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube Thumbnail Downloader</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            background: white;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        input {
+            width: 80%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        button {
+            padding: 10px 15px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #218838;
+        }
+
+        .result {
+            margin-top: 20px;
+        }
+
+        .thumbnail {
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>YouTube Thumbnail Downloader</h1>
+        <input type="text" id="urlInput" placeholder="Enter YouTube URL here" />
+        <button id="getIdButton">Get Thumbnails</button>
+        <div id="result" class="result"></div>
+    </div>
+
+    <script>
+        document.getElementById('getIdButton').addEventListener('click', function() {
+            const urlInput = document.getElementById('urlInput').value;
+            const idMatch = urlInput.match(/(?:v=|\/)([a-zA-Z0-9_-]{11})/); // Regex to extract YouTube video ID
+
+            if (idMatch) {
+                const id = idMatch[1];
+                displayThumbnails(id);
+            } else {
+                alert('Invalid URL. Please enter a valid YouTube URL.');
+            }
+        });
+
+        function displayThumbnails(id) {
+            const resultDiv = document.getElementById('result');
+            resultDiv.innerHTML = ''; // Clear previous results
+
+            const sizes = {
+                default: `https://i.ytimg.com/vi/${id}/default.jpg`,
+                mqdefault: `https://i.ytimg.com/vi/${id}/mqdefault.jpg`,
+                hqdefault: `https://i.ytimg.com/vi/${id}/hqdefault.jpg`,
+                sddefault: `https://i.ytimg.com/vi/${id}/sddefault.jpg`,
+                maxresdefault: `https://i.ytimg.com/vi/${id}/maxresdefault.jpg`
+            };
+
+            for (const [size, url] of Object.entries(sizes)) {
+                resultDiv.innerHTML += `
+                    <div class="thumbnail">
+                        <img src="${url}" alt="${size} thumbnail" style="max-width: 100%; margin-bottom: 5px;" />
+                        <a href="${url}" download>
+                            <button>Download ${size} Thumbnail</button>
+                        </a>
+                    </div>
+                `;
+            }
+        }
+    </script>
+</body>
+</html>
