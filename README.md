@@ -26,12 +26,15 @@ MMPlay-OTT is an online streaming platform built with **PHP, MySQL, HTML, and CS
    ```
 3. Set up the database:
    - Import the provided SQL file into MySQL.
-   - Update database credentials in the `api`.php` file.
+   - Update database credentials in the `api.php` file.
 4. Start your local server (XAMPP, WAMP, or any preferred PHP server).
 5. Access the project via your browser:
    ```
    http://localhost/mmplay-ott
    ```
+
+## Screenshot
+![MMPlay-OTT Screenshot](screenshot.png)
 
 ## Contribution
 Feel free to contribute by forking the repository, making improvements, and submitting a pull request. Any enhancements, bug fixes, or feature additions are welcome! 🚀
