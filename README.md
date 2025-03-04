@@ -3,6 +3,7 @@
 MMPlay-OTT is an online streaming platform built with **PHP, MySQL, HTML, and CSS**. This project allows users to stream movies and TV shows seamlessly with an intuitive and responsive design.
 
 ## Features
+
 - **User Authentication** – Secure login and registration system.
 - **Video Streaming** – Play movies and TV shows smoothly.
 - **Categories & Search** – Filter content by genre, trending, and keywords.
@@ -11,11 +12,13 @@ MMPlay-OTT is an online streaming platform built with **PHP, MySQL, HTML, and CS
 - **Responsive Design** – Optimized for all devices.
 
 ## Technologies Used
+
 - **Backend:** PHP & MySQL
 - **Frontend:** HTML, CSS
 - **Database:** MySQL
 
 ## Installation
+
 1. Clone the repository:
    ```sh
    git clone https://github.com/mrsonukr/mmplay-ott.git
@@ -34,12 +37,15 @@ MMPlay-OTT is an online streaming platform built with **PHP, MySQL, HTML, and CS
    ```
 
 ## Screenshot
+
 ![MMPlay-OTT Screenshot](Screenshot.png)
 
 ## Contribution
+
 Feel free to contribute by forking the repository, making improvements, and submitting a pull request. Any enhancements, bug fixes, or feature additions are welcome! 🚀
 
 ## License
+
 This project is open-source and free to use under the MIT License.
 
 ---
