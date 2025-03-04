@@ -34,7 +34,7 @@ MMPlay-OTT is an online streaming platform built with **PHP, MySQL, HTML, and CS
    ```
 
 ## Screenshot
-![MMPlay-OTT Screenshot](screenshot.png)
+![MMPlay-OTT Screenshot](Screenshot.png)
 
 ## Contribution
 Feel free to contribute by forking the repository, making improvements, and submitting a pull request. Any enhancements, bug fixes, or feature additions are welcome! 🚀
